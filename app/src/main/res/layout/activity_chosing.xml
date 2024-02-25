@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:scaleX="1.1"
+    android:scaleY="1.1"
+    tools:context=".view.chosing">
+
+    <ImageButton
+        android:id="@+id/question"
+        android:layout_width="175dp"
+        android:layout_height="89dp"
+        android:layout_marginStart="118dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="118dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        android:src="@drawable/background_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/test" />
+
+    <TextView
+        android:id="@+id/questiontext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="63dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="63dp"
+        android:layout_marginBottom="35dp"
+        android:text="Вопросы"
+        android:textColor="#5C00FF"
+        app:layout_constraintBottom_toBottomOf="@+id/question"
+        app:layout_constraintEnd_toEndOf="@+id/question"
+        app:layout_constraintStart_toStartOf="@+id/question"
+        app:layout_constraintTop_toTopOf="@+id/question" />
+
+    <ImageButton
+        android:id="@+id/test"
+        android:layout_width="175dp"
+        android:layout_height="89dp"
+        android:layout_marginStart="118dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="118dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        android:src="@drawable/background_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dictionary" />
+
+    <TextView
+        android:id="@+id/testtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="63dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="63dp"
+        android:layout_marginBottom="35dp"
+        android:text="Тест"
+        android:textColor="#5C00FF"
+        app:layout_constraintBottom_toBottomOf="@+id/test"
+        app:layout_constraintEnd_toEndOf="@+id/test"
+        app:layout_constraintStart_toStartOf="@+id/test"
+        app:layout_constraintTop_toTopOf="@+id/test" />
+
+    <ImageButton
+        android:id="@+id/dictionary"
+        android:layout_width="175dp"
+        android:layout_height="89dp"
+        android:layout_marginStart="118dp"
+        android:layout_marginTop="134dp"
+        android:layout_marginEnd="118dp"
+        android:layout_marginBottom="35dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        android:src="@drawable/background_button"
+        app:layout_constraintBottom_toTopOf="@+id/test"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dicttext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="63dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="63dp"
+        android:layout_marginBottom="35dp"
+        android:text="Слоаврь"
+        android:textColor="#5C00FF"
+        app:layout_constraintBottom_toBottomOf="@+id/dictionary"
+        app:layout_constraintEnd_toEndOf="@+id/dictionary"
+        app:layout_constraintStart_toStartOf="@+id/dictionary"
+        app:layout_constraintTop_toTopOf="@+id/dictionary" />
+
+    <ImageButton
+        android:id="@+id/redact"
+        android:layout_width="175dp"
+        android:layout_height="89dp"
+        android:layout_marginStart="118dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="118dp"
+        android:layout_marginBottom="135dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        android:src="@drawable/background_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question" />
+
+    <TextView
+        android:id="@+id/redacttext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="63dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="63dp"
+        android:layout_marginBottom="35dp"
+        android:text="Вопросы"
+        android:textColor="#5C00FF"
+        app:layout_constraintBottom_toBottomOf="@+id/redact"
+        app:layout_constraintEnd_toEndOf="@+id/redact"
+        app:layout_constraintStart_toStartOf="@+id/redact"
+        app:layout_constraintTop_toTopOf="@+id/redact" />
+</androidx.constraintlayout.widget.ConstraintLayout>
