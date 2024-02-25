@@ -27,8 +27,8 @@ public class Questions_spisok extends AppCompatActivity {
     }
 
     private void setInitialData(){
-        questions.add(new Question("Whats your name", 1));
-        questions.add(new Question("How old are you", 2));
-        questions.add(new Question("How are you", 3));
+        questions.add(new Question("Whats your name", "1"));
+        questions.add(new Question("How old are you", "2"));
+        questions.add(new Question("How are you", "3"));
     }
 }

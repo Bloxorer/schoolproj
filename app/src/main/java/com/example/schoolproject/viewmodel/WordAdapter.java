@@ -1,55 +1,77 @@
 package com.example.schoolproject.viewmodel;
 
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.schoolproject.R;
 import com.example.schoolproject.model.Word;
-import com.example.schoolproject.view.Redact;
+import com.example.schoolproject.view.UpdateActivity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class WordAdapter extends RecyclerView.Adapter<WordAdapter.ViewHolder> {
-    private final LayoutInflater inflater;
-    public final List<Word> words;
+    private Context context;
+    private Activity activity;
+    private List<Word> wordlist;
 
-    public WordAdapter(LayoutInflater inflater, List<Word> words) {
-        this.inflater = inflater;
-        this.words = words;
+    private List<Word> newWord;
+
+    public WordAdapter(Context context, Activity activity, List<Word> wordlist) {
+        this.context = context;
+        this.activity = activity;
+        this.wordlist = wordlist;
+        newWord = new ArrayList<>(wordlist);
     }
-
-
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = inflater.inflate(R.layout.list_words, parent, false);
+    public ViewHolder onCreateViewHolder( ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_words, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
-        Word word = words.get(position);
-        holder.name.setText(word.getWord());
-        holder.definition.setText(word.getDefinition());
+    public void onBindViewHolder( ViewHolder holder, int position) {
+        holder.word.setText(wordlist.get(position).getWord());
+        holder.definition.setText(wordlist.get(position).getDefinition());
+
+        holder.list.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, UpdateActivity.class);
+
+                intent.putExtra("word", wordlist.get(position).getWord());
+                intent.putExtra("definition", wordlist.get(position).getDefinition());
+                intent.putExtra("id", wordlist.get(position).getId());
+
+                activity.startActivity(intent);
+            }
+        });
+
     }
 
     @Override
     public int getItemCount() {
-        return words.size();
+        return wordlist.size();
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder{
-        final TextView name;
-        final TextView definition;
+    public static class ViewHolder extends  RecyclerView.ViewHolder{
 
-        public ViewHolder(View view) {
-            super(view);
-            name = view.findViewById(R.id.word);
-            definition = view.findViewById(R.id.definition);
-        }
-    }
+        TextView word, definition;
+        ConstraintLayout list;
+       ViewHolder(@NonNull View View) {
+           super(View);
+           word = View.findViewById(R.id.word);
+           definition = View.findViewById(R.id.definition);
+           list = View.findViewById(R.id.listlayout);
+       }
+   }
 }

@@ -15,14 +15,6 @@ import com.example.schoolproject.viewmodel.QuestAdapter;
 public class Redact extends AppCompatActivity {
     public int i = 1;
 
-    public int getI() {
-        return i;
-    }
-
-    public void setI(int i) {
-        this.i = i;
-    }
-
     private ImageButton spisok;
     private ImageButton delword;
     private ImageButton delquest;

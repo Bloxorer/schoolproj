@@ -3,7 +3,7 @@ package com.example.schoolproject.model;
 public class Word {
     private String word;
     private String definition;
-
+    private String id;
 
     public String getWord() {
         return word;
@@ -21,8 +21,17 @@ public class Word {
         this.definition = definition;
     }
 
-    public Word(String word, String definition) {
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public Word(String word, String definition, String id) {
         this.word = word;
         this.definition = definition;
+        this.id = id;
     }
 }

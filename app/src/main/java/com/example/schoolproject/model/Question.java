@@ -2,7 +2,8 @@ package com.example.schoolproject.model;
 
 public class Question {
     private String quest;
-    private int num;
+    private String id;
+
 
     public String getQuest() {
         return quest;
@@ -12,16 +13,16 @@ public class Question {
         this.quest = quest;
     }
 
-    public int getNum() {
-        return num;
+    public String getId() {
+        return id;
     }
 
-    public void setNum(int num) {
-        this.num = num;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public Question(String quest, int num) {
+    public Question(String quest, String id) {
         this.quest = quest;
-        this.num = num;
+        this.id = id;
     }
 }
