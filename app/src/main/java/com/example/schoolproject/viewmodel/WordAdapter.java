@@ -16,7 +16,7 @@ import java.util.List;
 
 public class WordAdapter extends RecyclerView.Adapter<WordAdapter.ViewHolder> {
     private final LayoutInflater inflater;
-    private final List<Word> words;
+    public final List<Word> words;
 
     public WordAdapter(LayoutInflater inflater, List<Word> words) {
         this.inflater = inflater;

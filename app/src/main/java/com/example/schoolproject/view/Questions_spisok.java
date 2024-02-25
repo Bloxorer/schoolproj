@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Questions_spisok extends AppCompatActivity {
-
+    Redact redact;
     List<Question> questions = new ArrayList<Question>();
 
     @Override
@@ -24,7 +24,6 @@ public class Questions_spisok extends AppCompatActivity {
         RecyclerView recyclerView = findViewById(R.id.quests_spisok);
         QuestAdapter adapter = new QuestAdapter(this.getLayoutInflater(), questions);
         recyclerView.setAdapter(adapter);
-
     }
 
     private void setInitialData(){

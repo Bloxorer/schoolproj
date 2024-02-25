@@ -15,9 +15,16 @@ import com.example.schoolproject.view.Redact;
 
 import java.util.List;
 
-public class QuestAdapter extends RecyclerView.Adapter<WordAdapter.ViewHolder> {
+public class QuestAdapter extends RecyclerView.Adapter<QuestAdapter.ViewHolder> {
     private final LayoutInflater inflater;
-    private final List<Question> quests;
+    public List<Question> quests;
+
+    public List<Question> getQuests() {
+        return quests;
+    }
+    public void setQuests(List<Question> quests) {
+        this.quests = quests;
+    }
 
     public QuestAdapter(LayoutInflater inflater, List<Question> quests) {
         this.inflater = inflater;
@@ -26,16 +33,16 @@ public class QuestAdapter extends RecyclerView.Adapter<WordAdapter.ViewHolder> {
 
 
     @Override
-    public WordAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = inflater.inflate(R.layout.list_words, parent, false);
-        return new WordAdapter.ViewHolder(view);
+    public QuestAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View view = inflater.inflate(R.layout.quest_list, parent, false);
+        return new QuestAdapter.ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(WordAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(QuestAdapter.ViewHolder holder, int position) {
         Question question = quests.get(position);
-        holder.name.setText(question.getQuest());
-        holder.definition.setText(question.getNum());
+        holder.quest.setText(question.getQuest());
+
     }
 
     @Override
@@ -45,12 +52,12 @@ public class QuestAdapter extends RecyclerView.Adapter<WordAdapter.ViewHolder> {
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
         final TextView quest;
-        final TextView num;
+
 
         public ViewHolder(View view) {
             super(view);
             quest = view.findViewById(R.id.question);
-            num = view.findViewById(R.id.number);
-        }
+
+                    }
     }
 }
