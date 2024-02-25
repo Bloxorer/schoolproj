@@ -27,6 +27,9 @@ public class chosing extends AppCompatActivity {
         redact = findViewById(R.id.redact);
         //listeners
         dictionary.setOnClickListener(dict_listener);
+        test.setOnClickListener(test_listener);
+        question.setOnClickListener(quest_listener);
+        redact.setOnClickListener(redact_listener);
     }
     private final View.OnClickListener dict_listener = new View.OnClickListener() {
         @Override
@@ -34,6 +37,30 @@ public class chosing extends AppCompatActivity {
             Intent dict = new Intent(getApplicationContext(), com.example.schoolproject.view.dictionary.class);
             dict.addFlags(FLAG_ACTIVITY_REORDER_TO_FRONT);
             startActivity(dict);
+        }
+    };
+    private final View.OnClickListener test_listener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent test = new Intent(getApplicationContext(), com.example.schoolproject.view.test.class);
+            test.addFlags(FLAG_ACTIVITY_REORDER_TO_FRONT);
+            startActivity(test);
+        }
+    };
+    private final View.OnClickListener quest_listener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent quest = new Intent(getApplicationContext(), com.example.schoolproject.view.question.class);
+            quest.addFlags(FLAG_ACTIVITY_REORDER_TO_FRONT);
+            startActivity(quest);
+        }
+    };
+    private final View.OnClickListener redact_listener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent redact = new Intent(getApplicationContext(), com.example.schoolproject.view.Redact.class);
+            redact.addFlags(FLAG_ACTIVITY_REORDER_TO_FRONT);
+            startActivity(redact);
         }
     };
 }

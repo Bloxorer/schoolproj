@@ -12,13 +12,14 @@ import android.widget.Button;
 import android.widget.ImageButton;
 
 import com.example.schoolproject.R;
+import com.example.schoolproject.model.Word;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class dictionary extends AppCompatActivity {
-    ImageButton start;
-    ImageButton exit;
+    List<Word> words = new ArrayList<Word>();
 
-
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
