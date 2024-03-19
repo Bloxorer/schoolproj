@@ -6,21 +6,20 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-public class DatabaseHelper extends SQLiteOpenHelper {
+public class DatabaseHelperGramma extends SQLiteOpenHelper {
     private Context context;
 
-    private static final String DatabaseName = "Words";
+    private static final String DatabaseName = "Gramma";
     private static final int DatabaseVersion = 1;
 
-    private static final String tableName = "Words";
+    private static final String tableName = "Gramma";
     private static final String columnId = "id";
     public static final  String columnTitle = "title";
     public static final String columnDescription = "description";
 
-    public DatabaseHelper(@Nullable Context context){
+    public DatabaseHelperGramma(@Nullable Context context){
         super(context, DatabaseName, null, DatabaseVersion);
         this.context = context;
     }
