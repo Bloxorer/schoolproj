@@ -12,24 +12,21 @@ import android.widget.ImageButton;
 import com.example.schoolproject.R;
 
 public class chosing extends AppCompatActivity {
-    private ImageButton dictionary;
-    private ImageButton test;
-    private ImageButton question;
-    private ImageButton redact;
+    private ImageButton dictionary, gramma, noteebok;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chosing);
         dictionary = findViewById(R.id.dictionary);
-        test = findViewById(R.id.test);
-        question = findViewById(R.id.question);
-        redact = findViewById(R.id.redact);
+        gramma = findViewById(R.id.gramma);
+        noteebok = findViewById(R.id.notebook);
         //listeners
         dictionary.setOnClickListener(dict_listener);
-        test.setOnClickListener(test_listener);
-        question.setOnClickListener(quest_listener);
-        redact.setOnClickListener(redact_listener);
+        gramma.setOnClickListener(gramma_list);
+        noteebok.setOnClickListener(note_listener);
+
     }
     private final View.OnClickListener dict_listener = new View.OnClickListener() {
         @Override
@@ -39,28 +36,21 @@ public class chosing extends AppCompatActivity {
             startActivity(dict);
         }
     };
-    private final View.OnClickListener test_listener = new View.OnClickListener() {
+    private final View.OnClickListener gramma_list = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent test = new Intent(getApplicationContext(), com.example.schoolproject.view.test.class);
-            test.addFlags(FLAG_ACTIVITY_REORDER_TO_FRONT);
-            startActivity(test);
+            Intent gramma = new Intent(getApplicationContext(), Gramma.class);
+            gramma.addFlags(FLAG_ACTIVITY_REORDER_TO_FRONT);
+            startActivity(gramma);
         }
     };
-    private final View.OnClickListener quest_listener = new View.OnClickListener() {
+    private final View.OnClickListener note_listener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent quest = new Intent(getApplicationContext(), com.example.schoolproject.view.question.class);
-            quest.addFlags(FLAG_ACTIVITY_REORDER_TO_FRONT);
-            startActivity(quest);
+            Intent note = new Intent(getApplicationContext(), Notebook.class);
+            note.addFlags(FLAG_ACTIVITY_REORDER_TO_FRONT);
+            startActivity(note);
         }
     };
-    private final View.OnClickListener redact_listener = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            Intent redact = new Intent(getApplicationContext(), com.example.schoolproject.view.Redact.class);
-            redact.addFlags(FLAG_ACTIVITY_REORDER_TO_FRONT);
-            startActivity(redact);
-        }
-    };
+
 }
