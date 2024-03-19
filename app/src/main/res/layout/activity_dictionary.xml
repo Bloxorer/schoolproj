@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".view.dictionary">
+    tools:context=".view.Word.dictionary">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+        android:id="@+id/WordView"
         android:layout_width="341dp"
         android:layout_height="621dp"
         android:layout_marginStart="35dp"
@@ -24,7 +24,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/newActWord"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="280dp"
@@ -34,8 +34,8 @@
         android:background="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/recyclerView"
-        app:layout_constraintTop_toTopOf="@+id/recyclerView"
+        app:layout_constraintStart_toStartOf="@+id/WordView"
+        app:layout_constraintTop_toTopOf="@+id/WordView"
         app:srcCompat="@drawable/addword" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

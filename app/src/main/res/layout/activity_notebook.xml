@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/back_recycle2"
-    tools:context=".view.NotebookView">
+    tools:context=".view.Notebook.NotebookView">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycleNotebook"
@@ -40,5 +40,19 @@
         app:layout_constraintStart_toStartOf="@+id/recycleNotebook"
         app:layout_constraintTop_toTopOf="@+id/recycleNotebook"
         app:srcCompat="@drawable/addword" />
+
+    <Button
+        android:id="@+id/BackNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="314dp"
+        android:layout_marginBottom="2dp"
+        android:text="Назад"
+        app:layout_constraintBottom_toTopOf="@+id/recycleNotebook"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

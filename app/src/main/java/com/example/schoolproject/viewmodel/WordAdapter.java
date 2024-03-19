@@ -13,9 +13,9 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.schoolproject.R;
-import com.example.schoolproject.model.Gramma;
 import com.example.schoolproject.model.Word;
-import com.example.schoolproject.view.UpdateActivity;
+import com.example.schoolproject.view.Notebook.UpdateActivity;
+import com.example.schoolproject.view.Word.UpdateWordActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,19 +35,19 @@ public class WordAdapter extends RecyclerView.Adapter<WordAdapter.ViewHolder> {
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.note_recycle_view, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.note_recycle_view_word, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        holder.describe.setText(wordList.get(position).getDefinition());
-        holder.nameNote.setText(wordList.get(position).getWord());
+        holder.describeWord.setText(wordList.get(position).getDefinition());
+        holder.nameWord.setText(wordList.get(position).getWord());
 
         holder.layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, UpdateActivity.class);
+                Intent intent = new Intent(context, UpdateWordActivity.class);
                 intent.putExtra("name", wordList.get(position).getWord());
                 intent.putExtra("description", wordList.get(position).getDefinition());
                 intent.putExtra("id", wordList.get(position).getId());
@@ -62,13 +62,13 @@ public class WordAdapter extends RecyclerView.Adapter<WordAdapter.ViewHolder> {
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
-        TextView nameNote,describe;
+        TextView nameWord,describeWord;
         ConstraintLayout layout;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            nameNote = itemView.findViewById(R.id.nameNote);
-            layout = itemView.findViewById(R.id.notelayout);
-            describe = itemView.findViewById(R.id.describeNote);
+            nameWord = itemView.findViewById(R.id.nameWord);
+            layout = itemView.findViewById(R.id.wordlayout);
+            describeWord = itemView.findViewById(R.id.describeWord);
         }
     }
 }

@@ -14,8 +14,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.schoolproject.R;
 import com.example.schoolproject.model.Gramma;
-import com.example.schoolproject.model.Notebook;
-import com.example.schoolproject.view.UpdateActivity;
+import com.example.schoolproject.view.Gramma.UPDGramma;
+import com.example.schoolproject.view.Notebook.UpdateActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,7 +35,7 @@ public class GrammaAdapter extends RecyclerView.Adapter<GrammaAdapter.ViewHolder
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.note_recycle_view, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.note_recycle_view_gramma, parent, false);
         return new ViewHolder(view);
     }
 
@@ -47,7 +47,7 @@ public class GrammaAdapter extends RecyclerView.Adapter<GrammaAdapter.ViewHolder
         holder.layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, UpdateActivity.class);
+                Intent intent = new Intent(context, UPDGramma.class);
                 intent.putExtra("name", grammaList.get(position).getName());
                 intent.putExtra("description", grammaList.get(position).getDescription());
                 intent.putExtra("id", grammaList.get(position).getId());
@@ -66,9 +66,9 @@ public class GrammaAdapter extends RecyclerView.Adapter<GrammaAdapter.ViewHolder
         ConstraintLayout layout;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            nameNote = itemView.findViewById(R.id.nameNote);
-            layout = itemView.findViewById(R.id.notelayout);
-            describe = itemView.findViewById(R.id.describeNote);
+            nameNote = itemView.findViewById(R.id.nameGramma);
+            layout = itemView.findViewById(R.id.Grammalayout);
+            describe = itemView.findViewById(R.id.describeGramma);
         }
     }
 }

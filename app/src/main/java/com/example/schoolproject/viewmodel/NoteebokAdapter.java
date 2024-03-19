@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.schoolproject.R;
 import com.example.schoolproject.model.Notebook;
-import com.example.schoolproject.view.UpdateActivity;
+import com.example.schoolproject.view.Notebook.UpdateActivity;
 
 import java.util.ArrayList;
 import java.util.List;

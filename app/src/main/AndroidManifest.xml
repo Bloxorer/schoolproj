@@ -13,22 +13,31 @@
         android:theme="@style/Theme.SchoolProject"
         tools:targetApi="31">
         <activity
-            android:name=".view.AddWordActivity"
+            android:name=".view.Gramma.UPDGramma"
             android:exported="false" />
         <activity
-            android:name=".view.SeenActivityGramma"
+            android:name=".view.Gramma.AddGramma"
             android:exported="false" />
         <activity
-            android:name=".view.AddNoteACtiv"
+            android:name=".view.Word.UpdateWordActivity"
             android:exported="false" />
         <activity
-            android:name=".view.NotebookView"
+            android:name=".view.Word.AddWordActivity"
             android:exported="false" />
         <activity
-            android:name=".view.GrammaView"
+            android:name=".view.Gramma.SeenActivityGramma"
             android:exported="false" />
         <activity
-            android:name=".view.UpdateActivity"
+            android:name=".view.Notebook.AddNoteACtiv"
+            android:exported="false" />
+        <activity
+            android:name=".view.Notebook.NotebookView"
+            android:exported="false" />
+        <activity
+            android:name=".view.Gramma.GrammaView"
+            android:exported="false" />
+        <activity
+            android:name=".view.Notebook.UpdateActivity"
             android:exported="false" />
         <activity
             android:name=".view.Questions_spisok"
@@ -43,7 +52,7 @@
             android:name=".view.Redact"
             android:exported="false" />
         <activity
-            android:name=".view.dictionary"
+            android:name=".view.Word.dictionary"
             android:exported="false" />
         <activity
             android:name=".view.chosing"

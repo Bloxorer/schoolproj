@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.ImageButton;
 
 import com.example.schoolproject.R;
+import com.example.schoolproject.view.Gramma.GrammaView;
+import com.example.schoolproject.view.Notebook.NotebookView;
 
 public class chosing extends AppCompatActivity {
     private ImageButton dictionary, gramma, noteebok;
@@ -31,7 +33,7 @@ public class chosing extends AppCompatActivity {
     private final View.OnClickListener dict_listener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent dict = new Intent(getApplicationContext(), com.example.schoolproject.view.dictionary.class);
+            Intent dict = new Intent(getApplicationContext(), com.example.schoolproject.view.Word.dictionary.class);
             dict.addFlags(FLAG_ACTIVITY_REORDER_TO_FRONT);
             startActivity(dict);
         }

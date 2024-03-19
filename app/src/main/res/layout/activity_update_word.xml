@@ -2,13 +2,14 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".view.Notebook.UpdateActivity">
+    tools:context=".view.Word.UpdateWordActivity">
 
     <EditText
-        android:id="@+id/editNote"
+        android:id="@+id/editWord"
         android:layout_width="292dp"
         android:layout_height="129dp"
         android:layout_marginStart="97dp"
@@ -17,14 +18,14 @@
         android:background="@drawable/background_button"
         android:ems="10"
         android:inputType="text"
-        android:text="Заголовок"
+        android:text="Слово"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/desbribeEdit"
+        android:id="@+id/definitionedit"
         android:layout_width="346dp"
         android:layout_height="453dp"
         android:layout_marginStart="31dp"
@@ -33,26 +34,26 @@
         android:background="@drawable/background_button"
         android:ems="10"
         android:inputType="text"
-        android:text="Текст"
+        android:text="Перевод или объяснение"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
-        android:id="@+id/upd"
+        android:id="@+id/updWord"
         android:layout_width="133dp"
         android:layout_height="82dp"
-        android:layout_marginStart="96dp"
         android:layout_marginTop="7dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/back_recycle"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/del"
-        app:layout_constraintTop_toBottomOf="@+id/definitionedit" />
+        app:layout_constraintTop_toBottomOf="@+id/definitionedit"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="262dp" />
 
     <ImageButton
-        android:id="@+id/del"
+        android:id="@+id/delWord"
         android:layout_width="133dp"
         android:layout_height="82dp"
         android:layout_marginTop="7dp"
@@ -75,11 +76,11 @@
         android:textAlignment="center"
         android:textSize="30sp"
         app:autoSizeTextType="none"
-        app:layout_constraintBottom_toBottomOf="@+id/del"
-        app:layout_constraintEnd_toEndOf="@+id/del"
+        app:layout_constraintBottom_toBottomOf="@+id/delWord"
+        app:layout_constraintEnd_toEndOf="@+id/delWord"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/del"
-        app:layout_constraintTop_toTopOf="@+id/del"
+        app:layout_constraintStart_toStartOf="@+id/delWord"
+        app:layout_constraintTop_toTopOf="@+id/delWord"
         app:layout_constraintVertical_bias="0.512" />
 
     <TextView
@@ -92,23 +93,24 @@
         android:textAlignment="center"
         android:textSize="24sp"
         app:autoSizeTextType="none"
-        app:layout_constraintBottom_toBottomOf="@+id/upd"
-        app:layout_constraintEnd_toEndOf="@+id/upd"
+        app:layout_constraintBottom_toBottomOf="@+id/updWord"
+        app:layout_constraintEnd_toEndOf="@+id/updWord"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/upd"
-        app:layout_constraintTop_toTopOf="@+id/upd"
+        app:layout_constraintStart_toStartOf="@+id/updWord"
+        app:layout_constraintTop_toTopOf="@+id/updWord"
         app:layout_constraintVertical_bias="0.487" />
 
     <Button
-        android:id="@+id/backUpdNote"
+        android:id="@+id/BackUPDWord"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginBottom="36dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="21dp"
         android:text="Назад"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/upd"
-        app:layout_constraintStart_toEndOf="@+id/del"
-        app:layout_constraintTop_toBottomOf="@+id/desbribeEdit" />
+        app:layout_constraintEnd_toStartOf="@+id/updWord"
+        app:layout_constraintStart_toEndOf="@+id/delWord"
+        app:layout_constraintTop_toBottomOf="@+id/definitionedit" />
 </androidx.constraintlayout.widget.ConstraintLayout>

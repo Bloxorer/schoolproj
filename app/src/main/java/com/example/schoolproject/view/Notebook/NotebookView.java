@@ -1,10 +1,10 @@
-package com.example.schoolproject.view;
+package com.example.schoolproject.view.Notebook;
 
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.CursorAdapter;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
@@ -14,11 +14,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.schoolproject.R;
 import com.example.schoolproject.model.Notebook;
+import com.example.schoolproject.view.chosing;
 import com.example.schoolproject.viewmodel.DatabaseHelperNotebook;
 import com.example.schoolproject.viewmodel.NoteebokAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.prefs.BackingStoreException;
 
 public class NotebookView extends AppCompatActivity {
     private RecyclerView recyclerView;
@@ -31,10 +33,15 @@ public class NotebookView extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notebook);
-
+        Button button = findViewById(R.id.BackNote);
         recyclerView = findViewById(R.id.recycleNotebook);
         addNote = findViewById(R.id.addNote);
-
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(NotebookView.this, chosing.class));
+            }
+        });
         notebookList = new ArrayList<>();
         databaseHelperNotebook = new DatabaseHelperNotebook(this);
 

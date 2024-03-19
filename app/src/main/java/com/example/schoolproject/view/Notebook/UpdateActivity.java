@@ -1,11 +1,11 @@
-package com.example.schoolproject.view;
+package com.example.schoolproject.view.Notebook;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
@@ -20,9 +20,9 @@ public class UpdateActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update);
-
-        name = findViewById(R.id.editWord);
-        describe = findViewById(R.id.definitionedit);
+        Button button = findViewById(R.id.backUpdNote);
+        name = findViewById(R.id.editNote);
+        describe = findViewById(R.id.desbribeEdit);
         upd = findViewById(R.id.upd);
         del = findViewById(R.id.del);
         Intent intent = getIntent();
@@ -32,7 +32,12 @@ public class UpdateActivity extends AppCompatActivity {
 
         upd.setOnClickListener(listener);
         del.setOnClickListener(listener);
-
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(UpdateActivity.this, NotebookView.class));
+            }
+        });
     }
     private View.OnClickListener listener= new View.OnClickListener() {
         @Override
