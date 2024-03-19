@@ -39,25 +39,33 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/upd"
         android:layout_width="133dp"
         android:layout_height="82dp"
+        android:layout_marginStart="81dp"
+        android:layout_marginTop="7dp"
         android:layout_marginEnd="34dp"
         android:layout_marginBottom="16dp"
+        android:background="@drawable/back_recycle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/back_recycle" />
+        app:layout_constraintStart_toEndOf="@+id/del"
+        app:layout_constraintTop_toBottomOf="@+id/definitionedit" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/del"
         android:layout_width="133dp"
         android:layout_height="82dp"
-        android:layout_marginStart="31dp"
+        android:layout_marginTop="7dp"
         android:layout_marginBottom="16dp"
+        android:background="@drawable/back_recycle"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.111"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/back_recycle" />
+        app:layout_constraintTop_toBottomOf="@+id/definitionedit"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/updtext"

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/back_recycle2"
-    tools:context=".view.Notebook">
+    tools:context=".view.NotebookView">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycleNotebook"

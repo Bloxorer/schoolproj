@@ -13,10 +13,10 @@
         android:theme="@style/Theme.SchoolProject"
         tools:targetApi="31">
         <activity
-            android:name=".view.Notebook"
+            android:name=".view.NotebookView"
             android:exported="false" />
         <activity
-            android:name=".view.Gramma"
+            android:name=".view.GrammaView"
             android:exported="false" />
         <activity
             android:name=".view.UpdateActivity"

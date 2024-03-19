@@ -39,7 +39,7 @@ public class chosing extends AppCompatActivity {
     private final View.OnClickListener gramma_list = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent gramma = new Intent(getApplicationContext(), Gramma.class);
+            Intent gramma = new Intent(getApplicationContext(), GrammaView.class);
             gramma.addFlags(FLAG_ACTIVITY_REORDER_TO_FRONT);
             startActivity(gramma);
         }
@@ -47,7 +47,7 @@ public class chosing extends AppCompatActivity {
     private final View.OnClickListener note_listener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent note = new Intent(getApplicationContext(), Notebook.class);
+            Intent note = new Intent(getApplicationContext(), NotebookView.class);
             note.addFlags(FLAG_ACTIVITY_REORDER_TO_FRONT);
             startActivity(note);
         }
