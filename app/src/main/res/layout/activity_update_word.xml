@@ -44,13 +44,16 @@
         android:id="@+id/updWord"
         android:layout_width="133dp"
         android:layout_height="82dp"
+        android:layout_marginStart="231dp"
         android:layout_marginTop="7dp"
+        android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/back_recycle"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/delWord"
         app:layout_constraintTop_toBottomOf="@+id/definitionedit"
-        app:layout_constraintVertical_bias="1.0"
-        tools:layout_editor_absoluteX="262dp" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageButton
         android:id="@+id/delWord"

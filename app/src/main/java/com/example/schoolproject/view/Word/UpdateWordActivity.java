@@ -20,6 +20,7 @@ import com.example.schoolproject.viewmodel.DatabaseHelperNotebook;
 import com.example.schoolproject.viewmodel.DatabaseHelperWords;
 
 public class UpdateWordActivity extends AppCompatActivity {
+    Button button;
     private EditText name,describe;
     private ImageButton upd, del;
     private String id;
@@ -27,7 +28,7 @@ public class UpdateWordActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_word);
-        Button button = findViewById(R.id.backUpdNote);
+        Button button = findViewById(R.id.BackUPDWord);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

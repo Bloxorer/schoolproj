@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
@@ -16,6 +17,7 @@ import com.example.schoolproject.model.Notebook;
 import com.example.schoolproject.model.Word;
 import com.example.schoolproject.view.Notebook.AddNoteACtiv;
 import com.example.schoolproject.view.Notebook.NotebookView;
+import com.example.schoolproject.view.chosing;
 import com.example.schoolproject.viewmodel.DatabaseHelperNotebook;
 import com.example.schoolproject.viewmodel.DatabaseHelperWords;
 import com.example.schoolproject.viewmodel.NoteebokAdapter;
@@ -36,10 +38,15 @@ public class dictionary extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dictionary);
-
+        Button button = findViewById(R.id.BackDict);
         recyclerView = findViewById(R.id.WordView);
         addNote = findViewById(R.id.newActWord);
-
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(dictionary.this, chosing.class));
+            }
+        });
         words = new ArrayList<>();
         databaseHelperWords = new DatabaseHelperWords(this);
 
