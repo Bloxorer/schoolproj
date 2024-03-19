@@ -5,20 +5,40 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/back_recycle2"
     tools:context=".view.Notebook">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycleNotebook"
         android:layout_width="330dp"
         android:layout_height="609dp"
-        android:layout_marginStart="35dp"
+        android:layout_marginStart="41dp"
         android:layout_marginTop="55dp"
-        android:layout_marginEnd="46dp"
+        android:layout_marginEnd="40dp"
         android:layout_marginBottom="67dp"
-        android:background="@drawable/back_recycle"
+        android:background="@drawable/background_recycle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <ImageButton
+        android:id="@+id/addNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="274dp"
+        android:layout_marginTop="571dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="25dp"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/recycleNotebook"
+        app:layout_constraintTop_toTopOf="@+id/recycleNotebook"
+        app:srcCompat="@drawable/addword" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
