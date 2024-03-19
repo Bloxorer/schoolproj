@@ -1,14 +1,14 @@
 package com.example.schoolproject.model;
 
 public class Notebook {
-    private int id;
+    private String id;
     private String name, description;
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -18,6 +18,12 @@ public class Notebook {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Notebook(String id, String name, String description) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
     }
 
     public String getDescription() {
