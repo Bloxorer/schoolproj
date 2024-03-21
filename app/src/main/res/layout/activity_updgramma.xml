@@ -44,14 +44,14 @@
         android:id="@+id/updGramma"
         android:layout_width="133dp"
         android:layout_height="82dp"
-        android:layout_marginStart="96dp"
+        android:layout_marginStart="12dp"
         android:layout_marginTop="7dp"
-        android:layout_marginEnd="18dp"
+        android:layout_marginEnd="4dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/back_recycle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/delGramma"
+        app:layout_constraintStart_toEndOf="@+id/backUPDGR"
         app:layout_constraintTop_toBottomOf="@+id/desbribeEditGramma"
         app:layout_constraintVertical_bias="0.0" />
 

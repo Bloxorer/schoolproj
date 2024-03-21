@@ -10,6 +10,7 @@ import android.widget.ImageButton;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.schoolproject.R;
+import com.example.schoolproject.viewmodel.DatabaseHelperGramma;
 import com.example.schoolproject.viewmodel.DatabaseHelperNotebook;
 
 public class AddGramma extends AppCompatActivity {
@@ -24,18 +25,13 @@ public class AddGramma extends AppCompatActivity {
         addGramma = findViewById(R.id.newGramma);
         create = findViewById(R.id.createGramma);
         button = findViewById(R.id.backAddGramma);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(AddGramma.this, GrammaView.class));
-            }
-        });
+        button.setOnClickListener(listener);
 
         create.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DatabaseHelperNotebook databaseHelperNotebook = new DatabaseHelperNotebook(AddGramma.this);
-                databaseHelperNotebook.addNotes(addGramma.getText().toString(), adddesscrGramma.getText().toString());
+                DatabaseHelperGramma databaseHelperGramma = new DatabaseHelperGramma(AddGramma.this);
+                databaseHelperGramma.addNotes(addGramma.getText().toString(), adddesscrGramma.getText().toString());
 
                 Intent intent = new Intent(AddGramma.this, GrammaView.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -43,6 +39,11 @@ public class AddGramma extends AppCompatActivity {
                 finish();
             }
         });
-
     }
+    private View.OnClickListener listener  = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            startActivity(new Intent(AddGramma.this, GrammaView.class));
+        }
+    };
 }

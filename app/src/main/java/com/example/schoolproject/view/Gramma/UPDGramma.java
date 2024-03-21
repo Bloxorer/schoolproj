@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -53,14 +54,17 @@ public class UPDGramma extends AppCompatActivity {
         public void onClick(View v) {
             DatabaseHelperGramma databaseHelperGramma = new DatabaseHelperGramma(UPDGramma.this);
             switch (v.getId()){
-                case R.id.upd:
+                case R.id.updGramma:
                     databaseHelperGramma.updateNotes(name.getText().toString(), describe.getText().toString(), id);
-                    break;
-                case R.id.del:
+                    Toast.makeText(UPDGramma.this, "заметок нет", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(UPDGramma.this, GrammaView.class));
+                case R.id.delGramma:
                     databaseHelperGramma.deleteSingleItem(id);
-                    break;
+                    Toast.makeText(UPDGramma.this, "заметок нет", Toast.LENGTH_SHORT).show();
+
+                    startActivity(new Intent(UPDGramma.this, GrammaView.class));
             }
-            startActivity(new Intent(UPDGramma.this, GrammaView.class));
+            //startActivity(new Intent(UPDGramma.this, GrammaView.class));
         }
     };
 }
